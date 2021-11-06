@@ -1,4 +1,4 @@
-package donjon.donjon;
+package donjon;
 
 public class Character {
     private int strength;

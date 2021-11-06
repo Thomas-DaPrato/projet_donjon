@@ -1,9 +1,9 @@
-package donjon.donjon;
+package donjon;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Player extends Character{
+public class Player extends Character {
 
     private ArrayList<Object> inventory;
 

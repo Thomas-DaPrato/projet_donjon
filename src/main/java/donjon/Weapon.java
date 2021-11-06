@@ -1,6 +1,6 @@
-package donjon.donjon;
+package donjon;
 
-public class Weapon implements Object{
+public class Weapon implements Object {
     String name;
     int damage;
 

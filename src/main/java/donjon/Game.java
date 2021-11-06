@@ -1,8 +1,9 @@
-package donjon.donjon;
+package donjon;
 
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.canvas.Canvas;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -11,10 +12,15 @@ import java.util.ArrayList;
 public class Game extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-
-
-        Scene scene = new Scene(new Group(), 320, 240);
-        stage.setTitle("Hello!");
+        double width = 600;
+        double heigh = 600;
+        Group root = new Group();
+        Canvas canvas = new Canvas(width,heigh);
+        Room r1 = new Room();
+        Scene scene = new Scene(root, width, heigh);
+        r1.draw(canvas.getGraphicsContext2D());
+        root.getChildren().add(canvas);
+        stage.setTitle("Un super jeu qui marche");
         stage.setScene(scene);
 
 

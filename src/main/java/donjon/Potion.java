@@ -1,6 +1,6 @@
-package donjon.donjon;
+package donjon;
 
-public class Potion implements Object{
+public class Potion implements Object {
     String name;
     int heal;
 
@@ -11,8 +11,10 @@ public class Potion implements Object{
 
     @Override
     public void use(Character character) {
+        int oldHp = character.getHp();
         character.setHp(Math.min(character.getHp() + heal, character.getMaxHp()));
-        System.out.println("Vous avez utilisé une " + name + " qui vous a redonné" + heal + " pv");
+        int newHp = character.getHp();
+        System.out.println("Vous avez utilisé une " + name + " qui vous a redonné " + (newHp-oldHp) + " pv");
         System.out.println("Vous avez maintenant " + character.getHp() + " pv");
     }
 }

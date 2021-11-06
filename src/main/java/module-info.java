@@ -4,6 +4,6 @@ module donjon.donjon {
     requires javafx.graphics;
 
 
-    opens donjon.donjon to javafx.fxml;
-    exports donjon.donjon;
+    opens donjon to javafx.fxml;
+    exports donjon;
 }
